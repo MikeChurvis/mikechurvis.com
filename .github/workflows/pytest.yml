@@ -1,6 +1,10 @@
 name: API Tests (pytest)
 
-on: push
+on: 
+  push:
+    paths-ignore:
+      - "client/*"
+      - "**.md"
 
 jobs:
   pytest:

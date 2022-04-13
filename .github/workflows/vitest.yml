@@ -1,6 +1,10 @@
 name: Client Tests (vitest)
 
-on: push
+on: 
+  push:
+    paths-ignore:
+      - "api/*"
+      - "**.md"
 
 jobs:
   vitest:

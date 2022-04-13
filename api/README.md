@@ -1,5 +1,2 @@
-# Portfolio API ![api tests](https://github.com/MikeChurvis/mikechurvis.com/actions/workflows/pytest.yml/badge.svg)
-
-## Setup
-
-`git config core.hooksPath .githooks`
+# Portfolio API 
+![api tests](https://github.com/MikeChurvis/mikechurvis.com/actions/workflows/pytest.yml/badge.svg)
