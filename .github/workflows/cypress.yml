@@ -1,10 +1,6 @@
 name: End-to-End Tests (cypress)
 
-on: 
-  push:
-    paths-ignore:
-      - "api/*"
-      - "**.md"
+on: [push]
 
 jobs:
   cypress:
