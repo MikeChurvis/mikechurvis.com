@@ -1,6 +1,12 @@
 name: Client Tests (vitest)
 
-on: [push]
+on: 
+  push:
+    paths:
+      - "client/*"
+    paths-ignore:
+      - "**.md"
+      - "client/cypress/*"
 
 jobs:
   vitest:
