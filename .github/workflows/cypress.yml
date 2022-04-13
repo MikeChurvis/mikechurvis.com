@@ -1,6 +1,11 @@
 name: End-to-End Tests (cypress)
 
-on: [push]
+on:
+  push:
+    paths:
+      - "client/*"
+    paths-ignore:
+      - "**.md"
 
 jobs:
   cypress:
