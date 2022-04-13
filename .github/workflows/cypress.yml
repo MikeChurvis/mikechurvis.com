@@ -3,8 +3,9 @@ name: End-to-End Tests (cypress)
 on:
   push:
     paths:
-      - "client/**"
       - ".github/workflows/cypress.yml"
+      - "client/**"
+      - "!client/vitest/**"
       - "!**.md"
 
 jobs:
