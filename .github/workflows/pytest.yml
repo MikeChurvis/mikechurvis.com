@@ -3,9 +3,8 @@ name: API Tests (pytest)
 on: 
   push:
     paths:
-      - "api/*"
-    paths-ignore:
-      - "**.md"
+      - "api/**"
+      - "!**.md"
 
 jobs:
   pytest:
