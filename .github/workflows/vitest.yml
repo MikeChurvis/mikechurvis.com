@@ -16,7 +16,9 @@ jobs:
         with:
           node-version: '14'
       - name: Install dependencies
-        run: npm i
+        run: |
+          npm i
+          npx nuxi prepare
       - name: Run Vitest
         run: npm run vitest
   # TODO: test coverage report job
