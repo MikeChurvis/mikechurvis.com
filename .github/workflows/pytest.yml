@@ -1,9 +1,9 @@
-name: Django Tests (pytest)
+name: API Tests
 
 on: push
 
 jobs:
-  test:
+  pytest:
     runs-on: ubuntu-latest
     defaults:
       run:

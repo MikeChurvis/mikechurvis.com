@@ -1,9 +1,9 @@
-name: Client Tests (vitest)
+name: Client Tests
 
 on: push
 
 jobs:
-  test:
+  vitest:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -19,3 +19,4 @@ jobs:
         run: npm i
       - name: Run Vitest
         run: npm run vitest
+  # TODO: test coverage report job
