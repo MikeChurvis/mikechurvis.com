@@ -1,8 +1,5 @@
-name: API Tests (pytest)
-
-on:
-  push:
-    branches: main
+name: api-tests
+on: push
 
 jobs:
   pytest:
