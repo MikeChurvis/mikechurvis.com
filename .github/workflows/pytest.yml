@@ -1,6 +1,6 @@
 name: Django Tests (pytest)
 
-on: workflow_run
+on: push
 
 jobs:
   test:
