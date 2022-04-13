@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "api/**"
+      - ".github/workflows/pytest.yml"
       - "!**.md"
 
 jobs:
