@@ -3,17 +3,18 @@ name: End-to-End Tests (cypress)
 on:
   push:
     paths:
-      - ".github/workflows/cypress.yml"
-      - "client/**"
-      - "!client/vitest/**"
-      - "!**.md"
-
+      - .github/workflows/cypress.yml   # Watch changes to this workflow
+      - client/**                       # and every file in the client app project
+      - "!client/**/*.{test,spec}.ts"   # except for any test file
+      - "client/cypress/**"             # that doesn't belong to Cypress.
+      - "!**.md"                        # Ignore documentation changes.
 jobs:
   cypress:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the codebase
         uses: actions/checkout@v3
+
       - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
