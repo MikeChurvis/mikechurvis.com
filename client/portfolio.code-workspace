@@ -7,5 +7,7 @@
 			"path": "..\\.github"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
 }
