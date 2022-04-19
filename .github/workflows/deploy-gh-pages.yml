@@ -9,10 +9,12 @@ on:
     branches:
       - main
     paths:
-      - client/**                       # Trigger on changes to any file in the client folder
-      - "!client/**/*.{test,spec}.ts"   # that isn't a test file
-      - "!**.md"                        # or a documentation file.
-  workflow_dispatch:                    # Also allow this workflow to be manually triggered.
+      - .github/workflows/deploy-gh-pages   # Redeploy when a change is made to this workflow
+      - client/**                           # or to any file in the client folder,
+      - "!client/cypress**"                 # unless it belongs to Cypress,
+      - "!client/vitest**"                  # Vitest,
+      - "!**.md"                            # or is a documentation file.
+  workflow_dispatch:                        # This workflow may be manually triggered.
 
 jobs:
   deploy:
