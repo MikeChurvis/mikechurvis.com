@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import TestDummy from './TestDummy.vue'
+import TestDummy from 'src/components/TestDummy/TestDummy.vue'
 
 describe("The Test Dummy component", async () => {
   const testDummy = mount(TestDummy)
