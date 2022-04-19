@@ -1,6 +1,6 @@
 env:
   githubEmail: mikechurvis@gmail.com
-  deployToRepo: mikechurvis-v2.github.io
+  deployToRepo: mikechurvis.com
 
 name: Frontend Deployment
 
@@ -42,4 +42,4 @@ jobs:
           destination-repository-name: ${{ env.deployToRepo }}
           user-email: ${{ env.githubEmail }}
           commit-message: Deploys the Portfolio Frontend
-          target-branch: main
+          target-branch: gh-pages

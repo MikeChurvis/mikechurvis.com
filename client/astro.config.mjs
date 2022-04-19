@@ -4,5 +4,6 @@ import vue from "@astrojs/vue";
 // https://astro.build/config
 export default defineConfig({
   integrations: [vue()],
-  site: "https://mikechurvis-v2.github.io/",
+  site: "https://mikechurvis.com/",
+  base: "/mikechurvis.com"
 });
