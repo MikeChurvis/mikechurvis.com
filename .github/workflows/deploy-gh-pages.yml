@@ -1,0 +1,48 @@
+env:
+  githubEmail: mikechurvis@gmail.com
+  deployToRepo: mikechurvis.com
+
+name: Frontend Deployment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - client/**                       # Trigger on changes to any file in the client folder
+      - "!client/**/*.{test,spec}.ts"   # that isn't a test file
+      - "!**.md"                        # or a documentation file.
+  workflow_dispatch:                    # Also allow this workflow to be manually triggered.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the site
+        run: |
+          npm run build
+          touch ./dist/.nojekyll
+
+      - name: Push site to Pages repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'client/dist'
+          destination-github-username: ${{ github.actor }}
+          destination-repository-name: ${{ env.deployToRepo }}
+          user-email: ${{ env.githubEmail }}
+          commit-message: Deploys the Portfolio Frontend
+          target-branch: gh-pages
+
+
+
