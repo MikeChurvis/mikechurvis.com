@@ -5,5 +5,5 @@ import vue from "@astrojs/vue";
 export default defineConfig({
   integrations: [vue()],
   site: "https://mikechurvis.com/",
-  base: "/mikechurvis.com"
+  // base: "/mikechurvis.com"
 });
