@@ -5,7 +5,7 @@ on:
     paths:
       - .github/workflows/vitest.yml  # Watch changes to this workflow
       - client/**                     # and every file in the client app project
-      - "!client/cypress/**"          # except for the ones that belong to Cypress.
+      - "!client/cypress**"           # except for the ones that belong to Cypress.
       - "!**.md"                      # Ignore documentation changes.
 
 jobs:
