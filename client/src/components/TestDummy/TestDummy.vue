@@ -6,5 +6,5 @@ let count = ref(0)
 
 <template>
   <h1>Count = {{ count }}</h1>
-  <button @click="count++">Add 1</button>
+  <button @click="() => {count += 1}">Add 1</button>
 </template>
