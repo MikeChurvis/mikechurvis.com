@@ -16,7 +16,7 @@
   "author": "Mike Churvis",
   "license": "GPL-3",
   "dependencies": {
-    "astro": "^1.0.0-beta.12",
+    "astro": "^1.0.0-beta.17",
     "bootstrap": "^5.1.3"
   },
   "devDependencies": {
