@@ -1,4 +1,10 @@
-# Mike Churvis' Portfolio Website 
+> **Note for the Archives**
+> 
+> In hindsight, the main failure of this attempt was that I tried to do too much upfront. Look at the README badges, the painstaking CI setup that never had a single test run through it, the upfront system design legwork, the scaffolding, etc. I was so busy planning to build the site that I never actually *built* it.
+> 
+> **All code is technical debt.** There's a reason you're supposed to start with the minimum viable product. May this repo serve as a monument to this lesson.
+
+# Mike Churvis' Portfolio Website (Archived 2023-06-18)
 
 ## Tests
 | Type | Runner | Status |
